@@ -1,13 +1,120 @@
-<!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eying</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#38bdf8",
+            dark: "#0f172a",
+            card: "#1e293b"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-dark text-gray-200">
+
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-card shadow-lg z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <h1 class="text-primary font-bold text-lg">MyPortfolio</h1>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="nav-link text-primary">Home</a>
+        <a href="#about" class="nav-link hover:text-primary">About</a>
+        <a href="#projects" class="nav-link hover:text-primary">Projects</a>
+        <a href="#contact" class="nav-link hover:text-primary">Contact</a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden">
+        
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-card px-4 pb-4">
+    <a href="#home" class="block py-2 nav-link text-primary">Home</a>
+    <a href="#about" class="block py-2 nav-link">About</a>
+    <a href="#projects" class="block py-2 nav-link">Projects</a>
+    <a href="#contact" class="block py-2 nav-link">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-20">
+  <div>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+      Hi, I'm <span class="text-primary">Your Name</span>
+    </h1>
+    <p class="max-w-xl mx-auto mb-6">
+      A passionate web developer building modern and responsive websites.
+    </p>
+    <a href="#projects"
+       class="bg-primary text-black px-6 py-3 rounded-lg font-semibold hover:bg-sky-400">
+      View My Work
+    </a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 px-4 max-w-6xl mx-auto text-center">
+  <h2 class="text-3xl font-bold mb-6">About Me</h2>
+  <p class="max-w-2xl mx-auto text-gray-300">
+    I create clean, responsive, and user-friendly web applications using modern tools.
+  </p>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-20 px-4 bg-card">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-dark p-6 rounded-xl hover:-translate-y-2 transition">
+        <h3 class="font-semibold text-lg mb-2">Project One</h3>
+        <p class="text-gray-400">Responsive landing page.</p>
+      </div>
+      <div class="bg-dark p-6 rounded-xl hover:-translate-y-2 transition">
+        <h3 class="font-semibold text-lg mb-2">Project Two</h3>
+        <p class="text-gray-400">Portfolio website.</p>
+      </div>
+      <div class="bg-dark p-6 rounded-xl hover:-translate-y-2 transition">
+        <h3 class="font-semibold text-lg mb-2">Project Three</h3>
+        <p class="text-gray-400">JavaScript web app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 px-4 text-center">
+  <h2 class="text-3xl font-bold mb-6">Contact</h2>
+  <p>Email: hjjjj@email.com</p>
+  <p class="text-primary">LinkedIn • GitHub</p>
+</section>
+
+<footer class="text-center py-4 bg-card text-sm">
+  © 2026 . All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
+ 
+
+
